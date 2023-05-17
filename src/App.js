@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import backgroundImage from './ResBack.jpg';
 
-function App() {
+function App(){
+  const appStyle = {
+    backgroundImage: `url(${backgroundImage})`, // Set the background image
+    backgroundSize: 'cover', // Adjust the background size as needed
+    //backgroundRepeat: 'bo-repeat',
+    // Add any additional styles you want for the background
+  };
+          
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style = {appStyle}>
+      <h1>Welcome to my website :)</h1>
+      <p>the first thing to begin working on is getting a top bar with working buttons</p>
+
     </div>
   );
+  
 }
 
 export default App;
