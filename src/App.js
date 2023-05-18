@@ -1,6 +1,5 @@
 import './App.css';
 import TopBar from './TopBar';
-import Button from './Button';
 
 function App(){
   return (
