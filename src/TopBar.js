@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './Button';
 
 const TopBar = () => {
   const topBarStyle = {
@@ -12,7 +13,7 @@ const TopBar = () => {
   };
 
   return <div style={topBarStyle}> 
-  <button>button 1</button>   <button>button 2</button>       <button> button 3</button>
+  <Button label="resume" backgroundColor="white" textColor="black" />
   
   </div>;
 };
