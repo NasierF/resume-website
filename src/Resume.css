@@ -1,0 +1,8 @@
+.resume-container {
+  text-align: center;
+  display: flex; /* Use Flexbox */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  height: 100vh; /* Adjust this to your desired height or use "100%" */
+ /* Other styles for the container if needed */
+} 
