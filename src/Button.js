@@ -3,7 +3,7 @@ import React from 'react';
 //props is used to assign things, much like we do in a struct
 const Button = (props) => {
   const buttonStyle = {
-    backgroundColor: props.backgroundColor || 'black',
+    backgroundColor: props.backgroundColor || 'transparent',
     color: props.textColor || 'white',
     padding: props.padding || '10px 20px',
     border: 'none',

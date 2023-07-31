@@ -1,0 +1,36 @@
+/* Dropdown.css */
+
+.dropdown-container {
+    position: relative;
+    width: 100px; /* Adjust the width as needed */
+  }
+  
+  .dropdown-header {
+    cursor: pointer;
+  }
+  
+  .dropdown-icon {
+    width: 100%;
+  }
+  
+  .dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0a0909;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    width: 115%;
+  }
+  
+  .option {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .option:hover {
+    background-color: #ddd;
+  }
+  

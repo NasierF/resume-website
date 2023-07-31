@@ -1,8 +1,11 @@
 import React from 'react';
 import './App.css';
 import TopBar from './TopBar';
-import Resume from './Resume';
+import Testing from './Resumepage';
+import Contact from './Contact';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 
 
@@ -13,7 +16,8 @@ function App(){
       <TopBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/Resume" element={<Resume />} />
+        <Route path="/Resumepage" element={<Testing />} />
+        <Route path="/Contact" element={<Contact/>} />
       </Routes>
     </Router>
   );
@@ -22,8 +26,9 @@ function App(){
   const HomePage = () => {
     return(
     <div className="App">
-      <h1>Welcome to my website :)</h1>
-      <p>the first thing to begin working on is getting a top bar with working buttons.</p>
+      <h1>Nasier G. Fowlkes</h1>
+      <h2>current senior at Temple University</h2>
+      <h2>A little about myself:</h2>
       
       
     </div>
