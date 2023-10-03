@@ -1,39 +1,88 @@
 .App {
   text-align: center;
-}
+  color: aqua;
+  
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.TitleConainer {
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: left;
   color: white;
+  height: calc(var(--vh) * .1);
+  font-size: 50px;
+  /*background: url('./Black_sand.png'); /* Replace 'your-image-url.jpg' with the actual image file path */
+  /*background-size: cover; /* This property ensures the image covers the entire div */
+  /*background-repeat: no-repeat; /* Prevents the image from repeating */
+  /*background-position: center; /* Center the image within the div */
+  line-height: .001;
+  margin-top: 140px; /* Move the text down by 20 pixels */
+  margin-left: 330px; /* Move the text to the left by 20 pixels */
+  font-family: 'Poiret One', sans-serif;
+  overflow-x: hidden;
+ /* background-color: #000000; /**/
 }
 
-.App-link {
-  color: #61dafb;
+
+.TitleConainer img{
+  margin-top: -7vh;
+  width: 80px;
+  height: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.TitleConainer h5{
+  display: flex;
+  flex-direction: row;
+  column-gap: 40px;
+  size: 10px;
 }
+.TitleConainer span{
+  color: lightgreen;
+}
+
+.AboutMe {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: white;
+  height: calc(var(--vh) * .1);
+  font-size: 50px;
+  line-height: .001;
+  margin-top: 235px; /* Move the text down by 20 pixels */
+  margin-left: 0; /* Move the text to the left by 20 pixels */
+  font-family: 'Poiret One', sans-serif;
+  /*background-color: rgb(40, 122, 204); */
+  background-size: cover;
+  background-attachment: fixed
+}
+
+.AboutMe h1,
+.AboutMe h2,
+.AboutMe h3 {
+  margin-left: 50px;
+  text-align: center; /* Add left margin to text elements as needed */
+}
+ .AboutMe p{
+  display: flex;
+  flex-direction: column;
+  font-size: 50px;
+  column-gap: 100px;
+  width: 70vw;
+  margin-top: 50;
+  margin-left: 100px;
+  text-align: justify; /* Justify the text to fill the available space */
+  line-height: 2; 
+} 
+
+.AboutMe img{
+  width: 20vw;
+  height: auto;
+  margin-left: 1000px;
+  margin-top: -500px;
+}
+
+
 

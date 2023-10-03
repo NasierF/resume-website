@@ -3,7 +3,7 @@ import Button from './Button';
 //import Dropdown from './Dropdown'
 import { Link } from 'react-router-dom';
 import Tlogo from './Tlogo.png';
-import Dropdown from './Dropdown';
+//import TRlogo from './TransRoboOwl.svg'
 
 const TopBar = () => {
   const topBarStyle = {
@@ -18,7 +18,7 @@ const TopBar = () => {
 // look into how to customize links like buttons
 
   return <div style={topBarStyle}>
-    <img src={Tlogo} 
+    <img src={Tlogo}
         alt="Templelogo" 
         style={{
             width: '50px',   // Set the width of the image
@@ -29,7 +29,7 @@ const TopBar = () => {
         />
 
   <Link to = "/">
-      <Button label="Home"/>
+      <Button label="Home" />
     </Link>
 
 
@@ -40,8 +40,11 @@ const TopBar = () => {
     <Link to = "/Contact">
       <Button label = "conact me"/>
     </Link>
+
+    <Link to ='/ProjectsPage'>
+      <Button label ='Projects'/>
+      </Link>
     
-    <Dropdown />
     </div>;
 };
 
