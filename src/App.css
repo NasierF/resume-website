@@ -1,8 +1,22 @@
+/* use media query for different viewport optimization*/
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0; /**/
+  }
+  100% {
+    transform: translateX(0);
+     opacity: 1; /**/
+  }
+}
+
 .App {
   text-align: center;
   color: aqua;
-  
+}
 
+.App span{
+  color: lightgreen;
 }
 .TitleConainer {
   height: 100vh;
@@ -11,25 +25,27 @@
   flex-direction: column;
   text-align: left;
   color: white;
-  height: calc(var(--vh) * .1);
+  /*height: calc(var(--vh) * .1);*/
   font-size: 50px;
-  /*background: url('./Black_sand.png'); /* Replace 'your-image-url.jpg' with the actual image file path */
-  /*background-size: cover; /* This property ensures the image covers the entire div */
-  /*background-repeat: no-repeat; /* Prevents the image from repeating */
-  /*background-position: center; /* Center the image within the div */
   line-height: .001;
-  margin-top: 140px; /* Move the text down by 20 pixels */
-  margin-left: 330px; /* Move the text to the left by 20 pixels */
+  justify-content: center;
+  
+ /* margin-top: 140px; /* Move the text down by 20 pixels */
+  margin-left: 305px; /* Move the text to the left by 20 pixels */
   font-family: 'Poiret One', sans-serif;
   overflow-x: hidden;
- /* background-color: #000000; /**/
+  animation: slideInFromLeft 1s ease;
 }
 
 
 .TitleConainer img{
   margin-top: -7vh;
-  width: 80px;
+  width: 4vw;
   height: auto;
+}
+.TitleConainer img:hover{
+  transform: scale(1.1); /* Increase the size by 10% on hover */
+  transition: transform 0.2s ease; /* Add a smooth transition effect */
 }
 
 .TitleConainer h5{
@@ -37,26 +53,60 @@
   flex-direction: row;
   column-gap: 40px;
   size: 10px;
+  color: white;
 }
-.TitleConainer span{
-  color: lightgreen;
+.TitleConainer p{
+  font-size: 22px;
+  margin-top: 3.5vh;
+  margin-left: -2.5vw;
+}
+.TitleConainer a{
+   text-decoration: none;
+   color: inherit;
+}
+.resume-download{
+  display: flex;
+  /*flex-direction: row;/**/
+  color: white;
+  background-color: lightgreen;
+  border-radius: 50px;
+  width: 14vw;
+  text-align: center;
+  margin-top: -4vh ;
+  margin-left: -1vw;
+  height: 6vh;
+  align-items: center;
+}
+.resume-download img{
+  height: auto;
+  width: 2vw;
+  margin-right: 1vw; /* Add a small margin to separate the text and image */
+  margin-top: -10vh; /* Remove margin-top */
+  margin-left: 11vw;
+}
+.resume-download p{
+  flex-grow: 1; /* Allow text to take up remaining space */
+  margin: 0; /* Remove default margins to prevent extra spacing */
+  text-align: center; /* Center text horizontally */
+  margin-top: 1.8vh;
+  margin-left: -3vw;
+}
+.resume-download:hover{
+  transform: scale(1.1); /* Increase the size by 10% on hover */
+  transition: transform 0.2s ease; /* Add a smooth transition effect */
 }
 
 .AboutMe {
-  height: 100%;
   display: flex;
   flex-direction: column;
   text-align: left;
   color: white;
-  height: calc(var(--vh) * .1);
+  height: 5px;
   font-size: 50px;
-  line-height: .001;
-  margin-top: 235px; /* Move the text down by 20 pixels */
-  margin-left: 0; /* Move the text to the left by 20 pixels */
+  line-height: -2px;
+  margin-top: 235px; 
+  margin-left: 0; 
   font-family: 'Poiret One', sans-serif;
-  /*background-color: rgb(40, 122, 204); */
-  background-size: cover;
-  background-attachment: fixed
 }
 
 .AboutMe h1,
@@ -64,6 +114,7 @@
 .AboutMe h3 {
   margin-left: 50px;
   text-align: center; /* Add left margin to text elements as needed */
+  font-size: 50px;
 }
  .AboutMe p{
   display: flex;
@@ -74,15 +125,59 @@
   margin-top: 50;
   margin-left: 100px;
   text-align: justify; /* Justify the text to fill the available space */
-  line-height: 2; 
+  line-height: 1.7; 
 } 
-
-.AboutMe img{
-  width: 20vw;
-  height: auto;
-  margin-left: 1000px;
-  margin-top: -500px;
+.line{
+  display: flex;
+  flex-direction: row;
+  background-color: lightgreen;
+  width: 60vw;
+  height: .2vh;
+  margin-left: 20vw;
+  column-gap: 10vw;
+}
+.image-container{
+  display: flex;
+  flex-direction: row;
+ /* background-color: lightgreen; /**/
+  column-gap: -10px;
+  height: 30vh;
+  width: 100vw;
+  column-width: 1vw;
+  justify-content: left;
+  align-content: center;
+}
+.image-container img{
+  height: 10vh;
+  width: 10vw;
+  margin-left: 2vw;
+  margin-top: 3vh;
+  justify-content: center;
 }
 
+.bubbles{
+  display: flex;
+  align-items: center;
+  background-color: rgb(43, 42, 42); /**/
+  padding: 0px;
+  border-radius: 15px;
+  text-align: center; /**/
+  max-width: 23vw;
+  height: 20vh;
+  max-height: 50vh;
+  margin-left: 39vw;
+  margin-top: 9vh;
+}
 
+.bubbles p{
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  width: 21vw;
+  margin-top: 2vh;
+  margin-left: 2vh;
+  max-width: 23vw;
+  text-align: left;  
+  line-height: 1.2; 
+}
 
