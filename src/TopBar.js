@@ -1,10 +1,33 @@
 import React from 'react';
 import Button from './Button';
-//import Dropdown from './Dropdown'
 import './TopBar.css'
-import { Link } from 'react-router-dom';
-//import Tlogo from './Tlogo.png';
-//import bars from './bars-solid.svg';
+
+
+function scrollToTop() {
+  console.log("onscroll pressed");
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+}
+
+function scrollToAbt() {
+  console.log("onscroll pressed");
+  window.scrollTo({
+    top: 960,
+    behavior: 'smooth',
+  });
+}
+
+function scrollToSk() {
+  console.log("onscroll pressed");
+  window.scrollTo({
+    top: 2000,
+    behavior: 'smooth',
+  });
+}
+
+
 const TopBar = () => {
   const topBarStyle = {
     backgroundColor: '',
@@ -15,29 +38,20 @@ const TopBar = () => {
     color: 'white',
     // Add any additional styles you want for the top bar
   };
-
   
-// look into how to customize links like buttons
+  
+//since Topbar is not a part of the main file, it may not be possible to use the scrollto function from here, maybe implement the topbar in main file
 
-  return <div style={topBarStyle}>
-    <div className='TopBar-container'>
-      <h1>Nasier Fowlkes</h1>
-
-      <Link to = "/">
-        <Button label="Home" />
-      </Link>
-
-      <Link to = "/Resumepage">
-        <Button label ="resume"/>
-      </Link>
-
-      <Link to = "/Contact">
-        <Button label = "conact me"/>
-      </Link>
-
-      <Link to ='/ProjectsPage'>
-        <Button label ='Projects'/>
-      </Link>
+  return <div style={topBarStyle} className='TopBar-container'>
+    <h1>Nasier Fowlkes</h1>
+    <div onClick={() => scrollToTop()}>
+      <Button label="Home"/>
+    </div>
+    <div onClick={() => scrollToAbt()}>
+      <Button label="about me"/>
+    </div >
+    <div onClick={() => scrollToSk()}>
+    <Button label ='skills'/>
     </div>
   </div>;
 };

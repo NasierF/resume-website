@@ -29,9 +29,7 @@
   font-size: 50px;
   line-height: .001;
   justify-content: center;
-  
- /* margin-top: 140px; /* Move the text down by 20 pixels */
-  margin-left: 305px; /* Move the text to the left by 20 pixels */
+  margin-left: 305px; 
   font-family: 'Poiret One', sans-serif;
   overflow-x: hidden;
   animation: slideInFromLeft 1s ease;
@@ -54,6 +52,7 @@
   column-gap: 40px;
   size: 10px;
   color: white;
+  margin-left: 5px;
 }
 .TitleConainer p{
   font-size: 22px;
@@ -139,10 +138,13 @@
 .image-container{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
  /* background-color: lightgreen; /**/
-  column-gap: -10px;
+  /*column-gap: -10px; */
+  gap: 10px;
   height: 30vh;
-  width: 100vw;
+  width: 70vw;
+  margin-left: 19vw;
   column-width: 1vw;
   justify-content: left;
   align-content: center;
@@ -165,7 +167,7 @@
   max-width: 23vw;
   height: 20vh;
   max-height: 50vh;
-  margin-left: 39vw;
+  margin-left: -30vw;
   margin-top: 9vh;
 }
 
@@ -180,4 +182,11 @@
   text-align: left;  
   line-height: 1.2; 
 }
+.bottom{
+  height: 10vh;
+  width: auto;
+}
 
+.skills{
+  margin-top: 12vh;
+}

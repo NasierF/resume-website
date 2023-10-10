@@ -1,11 +1,8 @@
-import React /* , { useEffect } */ from 'react';
-//import { motion, useAnimation } from 'framer-motion';
+import React, {useEffect} from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import './App.css';
 import TopBar from './TopBar';
-import Testing from './Resumepage';
-import Contact from './Contact';
-import Projects from './projectsPage';
-//import slide1 from './TRO_fixed.svg'
 import github from './github.svg'
 import linkedin from './linkedin.svg'
 import mail from './envelope-solid.svg'
@@ -21,37 +18,42 @@ import HTML from './html-1.svg'
 import Css from './css-3.svg'
 import dwn from './download-solid.svg'
 import LaTeXRes from './LaTeX_resume.pdf'
-//import QW from './QuizWizLogo.png'
-//add a projects page. -- add button to TopBAr for navigation
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-//import Button from './Button';
+
 
 function App(){
+  window.scrollTo({top: 0, behavior: 'smooth'});
   return (
     <Router>
       <TopBar />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/Resumepage" element={<Testing />} />
-        <Route path="/Contact" element={<Contact/>} />
-        <Route path="/ProjectsPage" element={<Projects/>} />
+        <Route path="/" element={<HomePage/>}/>
       </Routes>
     </Router>
   );
 }
 
+
+
+
 const HomePage = () => {
-      /* framer motion logic goes here, actual visual elements are retuned */
-    
+  const {ref, inView} = useInView();
+  const animation = useAnimation();
 
+  useEffect(() => {
+    console.log("use effect hook, inView = ", inView);
+    if(inView){
+      animation.start({x: 1150, transition: {type: 'spring', duration: 2, bounce: 0.3, delay: 0.01}});
+    }
+    if (!inView){
+     ;
+    }
 
-
-
-
+  }, [inView, animation])
 
     return(
     <div className="App">
-      <div className='TitleConainer'>
+      <div className='TitleConainer' id='home'>
         <h1>Hi!</h1>
         <h2>I am <span>Nasier Fowlkes</span>,</h2>
         <h3><span>Computer Science</span> senior at <span>Temple University</span>.</h3>
@@ -76,31 +78,37 @@ const HomePage = () => {
           </div>
         </h5>
       </div>
-      <div className='AboutMe'>
+      <div ref={ref} className='AboutMe'>
         <h1> A little about myself: </h1>
-        <div className='bubbles'>
-            <p>I am the current <span>Web Manager</span> of Temple Robotics</p>
-        </div>
-        <div className='bubbles'>
+          <motion.div className='bubbles' animate={animation} whileHover={{rotate: [0, -20]}}>
+              <p>I am the current <span>Web Manager</span> of Temple Robotics</p>
+          </motion.div>
+        <motion.div className='bubbles' animate={animation} whileHover={{rotate: [0,20]}} >
             <p>I participated in Temple Universitys <span>2023 Owlhacks</span> competition </p>
-        </div>
-        <div className='bubbles'>
+        </motion.div>
+        <motion.div className='bubbles' animate={animation} whileHover={{rotate: [0,-20]}} >
             <p>My current occupation is <span>IT Support</span> at Temple University</p>
-        </div>
-        <h1>My <span>Skills</span></h1>
-        <div className='line'><p></p></div>
-        <div className='image-container'>
-          <img src={R} alt='React'/>
-          <img src={java} alt='Java'/>
-          <img src={js} alt='JavaScript'/>
-          <img src={sqlite} alt='SQLite'/>
-          <img src={C} alt='C'/>
-          <img src={ROS} alt='ROS'/>
-          <img src={python} alt='Python'/>
-          <img src={HTML} alt='Python'/>
-          <img src={Css} alt='Css'/>
+        </motion.div>
+        <div className='skills'>
+          <h1>My <span>Skills</span></h1>
+          <div className='line'><p></p></div>
+          <div className='image-container'>
+            <img src={R} alt='React'/>
+            <img src={java} alt='Java'/>
+            <img src={js} alt='JavaScript'/>
+            <img src={sqlite} alt='SQLite'/>
+            <img src={C} alt='C'/>
+            <img src={ROS} alt='ROS'/>
+            <img src={python} alt='Python'/>
+            <img src={HTML} alt='Python'/>
+            <img src={Css} alt='Css'/>
+          </div>
+          <div className='bottom'>
+            <p></p>
+          </div>
         </div>
       </div>
+      
     </div>
     );
 }
