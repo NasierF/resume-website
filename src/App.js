@@ -17,8 +17,6 @@ import HTML from './html-1.svg'
 import Css from './css-3.svg'
 import dwn from './download-solid.svg'
 import LaTeXRes from './LaTeX_resume.pdf'
-//import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 
 function App(){
   const {ref, inView} = useInView();
