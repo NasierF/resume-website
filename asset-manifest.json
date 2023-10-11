@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/resume-website/static/css/main.63416665.css",
-    "main.js": "/resume-website/static/js/main.59aea18b.js",
+    "main.js": "/resume-website/static/js/main.d68e831c.js",
     "static/js/787.8d7c7703.chunk.js": "/resume-website/static/js/787.8d7c7703.chunk.js",
     "static/media/LaTeX_resume.pdf": "/resume-website/static/media/LaTeX_resume.67a5c1d8897a80f7a08e.pdf",
     "static/media/Ros_logo.svg.png": "/resume-website/static/media/Ros_logo.svg.551a52ac8e69dbc23a86.png",
@@ -20,11 +20,11 @@
     "static/media/html-1.svg": "/resume-website/static/media/html-1.f318c8b1d5945fa9adc827ae94849cb1.svg",
     "static/media/javascript-1.svg": "/resume-website/static/media/javascript-1.b879f838faf1cb951d1c2230fd933a39.svg",
     "main.63416665.css.map": "/resume-website/static/css/main.63416665.css.map",
-    "main.59aea18b.js.map": "/resume-website/static/js/main.59aea18b.js.map",
+    "main.d68e831c.js.map": "/resume-website/static/js/main.d68e831c.js.map",
     "787.8d7c7703.chunk.js.map": "/resume-website/static/js/787.8d7c7703.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.63416665.css",
-    "static/js/main.59aea18b.js"
+    "static/js/main.d68e831c.js"
   ]
 }
