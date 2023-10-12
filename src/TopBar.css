@@ -28,4 +28,20 @@
     font-size: 23px;
     font-family: 'Poiret One', sans-serif;
   }
+  @media (max-width: 414px) {
+    .TopBar-container h1 {
+      color: lightgreen;
+      font-size: 20px;
+      margin-right: auto; /* Push h1 to the left by using auto margin on the right */
+    }
+    
+    .TopBar-container a,
+    .TopBar-container button {
+      color: lightgreen;
+      margin: 5px; /* Adjust margin as needed */
+      font-size: 20px;
+      font-family: 'Poiret One', sans-serif;
+    }
+    
+  }
   

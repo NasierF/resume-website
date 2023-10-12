@@ -201,26 +201,26 @@
     margin-left: 10vw;
     font-size: 60px;
     flex-wrap: wrap;
-    height: 150vh;
+    height: 200vh;
     margin-left: 0;
     margin-top: 2vh;
   }
   .resume-download{
-    transform: scale(.4);
-    width: 100vw;
-    margin-left: -33vw;
-    margin-top: -4.3vh;
+    transform: scale(.32);
+    width: 120vw;
+    margin-left: -48vw;
+    margin-top: -1vh;
     height: 9vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
   .resume-download p{
-    margin-left: 10vw;
+    margin-left: 14vw;
     margin-top: 2vh;
   }
   .resume-download img{
-    margin-left: 60vw;
+    margin-left: 70vw;
     transform: scale(3);
     margin-top: -5vh;
     position: relative;
@@ -243,12 +243,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     line-height: 1;
-    margin-top: 32vh;
+    margin-top: 40vh;
     width: 70vw;
   }
   .TitleConainer h5{
-    margin-top: 43vh;
+    margin-top: 60vh;
     margin-left: 10px;
+    max-height: 0vh;
   }
 
   .AboutMe h1{
@@ -258,7 +259,7 @@
   .bubbles{
     display: flex;
     flex-direction: row;
-    margin-left: -270vw;
+    margin-left: -320vw;
     width: auto;
     max-width: 80vw;
     height: 100vh;
