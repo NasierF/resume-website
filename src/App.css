@@ -188,7 +188,7 @@
   margin-top: 12vh;
 }
 
-@media (max-width: 414px) {
+@media (max-width: 718px) {
   /* CSS rules specific to iPhones go here */
   /* You can add or override styles for smaller screens */
   .App {
@@ -209,8 +209,8 @@
     transform: scale(.32);
     width: 120vw;
     margin-left: -48vw;
-    margin-top: -1vh;
-    height: 9vh;
+    margin-top: -1.5vh;
+    height: 11vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -243,7 +243,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     line-height: 1;
-    margin-top: 40vh;
+    margin-top: 45vh;
     width: 70vw;
   }
   .TitleConainer h5{
@@ -259,7 +259,7 @@
   .bubbles{
     display: flex;
     flex-direction: row;
-    margin-left: -320vw;
+    margin-left: -300vw;
     width: auto;
     max-width: 80vw;
     height: 100vh;
