@@ -35,7 +35,6 @@
   animation: slideInFromLeft 1s ease;
 }
 
-
 .TitleConainer img{
   margin-top: -7vh;
   width: 4vw;
@@ -139,8 +138,6 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
- /* background-color: lightgreen; /**/
-  /*column-gap: -10px; */
   gap: 10px;
   height: 30vh;
   width: 70vw;
@@ -189,4 +186,103 @@
 
 .skills{
   margin-top: 12vh;
+}
+
+@media (max-width: 414px) {
+  /* CSS rules specific to iPhones go here */
+  /* You can add or override styles for smaller screens */
+  .App {
+    /* Example iPhone-specific styles */
+    font-size: 16px;
+  }
+
+  .TitleConainer {
+    /* Example iPhone-specific styles */
+    margin-left: 10vw;
+    font-size: 60px;
+    flex-wrap: wrap;
+    height: 150vh;
+    margin-left: 0;
+    margin-top: 2vh;
+  }
+  .resume-download{
+    transform: scale(.4);
+    width: 100vw;
+    margin-left: -33vw;
+    margin-top: -4.3vh;
+    height: 9vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .resume-download p{
+    margin-left: 10vw;
+    margin-top: 2vh;
+  }
+  .resume-download img{
+    margin-left: 60vw;
+    transform: scale(3);
+    margin-top: -5vh;
+    position: relative;
+    top: -14px;
+  }
+  .TitleConainer a{
+    transform: scale(2);
+  }
+  .TitleConainer h2{
+    height: 0vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    line-height: 1;
+    margin-top: 0;
+  }
+  .TitleConainer h3{
+    height: 0vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    line-height: 1;
+    margin-top: 32vh;
+    width: 70vw;
+  }
+  .TitleConainer h5{
+    margin-top: 43vh;
+    margin-left: 10px;
+  }
+
+  .AboutMe h1{
+    margin-left: -6vw;
+  }
+
+  .bubbles{
+    display: flex;
+    flex-direction: row;
+    margin-left: -270vw;
+    width: auto;
+    max-width: 80vw;
+    height: 100vh;
+    flex-wrap: wrap;    
+  }
+  .bubbles p{
+    margin-left: 10px;
+    width: auto;
+    max-width: 80vw;
+  }
+  .skills{
+    margin-left: -4vw;
+  }
+  .skills h1{
+    margin-left: -1vw;
+  }
+  .image-container img{
+  height: 10vh;
+  width: 15vw;
+  margin-left: 2vw;
+  margin-top: 3vh;
+  justify-content: center;
+  position: relative;
+  top: 50px;
+  }
+
 }

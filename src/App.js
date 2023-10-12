@@ -35,7 +35,7 @@ function App(){
 
   return (
   <div className="App">
-  <div className='TitleConainer' id='home'>
+  <div className='TitleConainer'>
     <h1>Hi!</h1>
     <h2>I am <span>Nasier Fowlkes</span>,</h2>
     <h3><span>Computer Science</span> senior at <span>Temple University</span>.</h3>
@@ -62,13 +62,13 @@ function App(){
   </div>
   <div ref={ref} className='AboutMe'>
     <h1> A little about myself: </h1>
-      <motion.div className='bubbles' animate={animation} whileHover={{rotate: [0, -20]}}>
+      <motion.div className='bubbles' animate={animation} whileHover={{rotate: [0, -10]}}>
           <p>I am the current <span>Web Manager</span> of Temple Robotics</p>
       </motion.div>
-    <motion.div className='bubbles' animate={animation} whileHover={{rotate: [0,20]}} >
+    <motion.div className='bubbles' animate={animation} whileHover={{rotate: [0,10]}} >
         <p>I participated in Temple Universitys <span>2023 Owlhacks</span> competition </p>
     </motion.div>
-    <motion.div className='bubbles' animate={animation} whileHover={{rotate: [0,-20]}} >
+    <motion.div className='bubbles' animate={animation} whileHover={{rotate: [0,-10]}} >
         <p>My current occupation is <span>IT Support</span> at Temple University</p>
     </motion.div>
     <div className='skills'>
