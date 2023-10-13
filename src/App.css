@@ -145,6 +145,7 @@
   column-width: 1vw;
   justify-content: left;
   align-content: center;
+  overflow: hidden;
 }
 .image-container img{
   height: 10vh;
@@ -259,7 +260,7 @@
   .bubbles{
     display: flex;
     flex-direction: row;
-    margin-left: -300vw;
+    margin-left: -295vw;
     width: auto;
     max-width: 80vw;
     height: 100vh;
@@ -276,9 +277,15 @@
   .skills h1{
     margin-left: -1vw;
   }
+  .image-container{
+    max-height: 200vh;
+    height: 100vh;
+    margin-top: -35vh;
+  }
   .image-container img{
   height: 10vh;
   width: 15vw;
+  max-height: 100vh;
   margin-left: 2vw;
   margin-top: 3vh;
   justify-content: center;

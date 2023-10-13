@@ -85,9 +85,6 @@ function App(){
         <img src={HTML} alt='Python'/>
         <img src={Css} alt='Css'/>
       </div>
-      <div className='bottom'>
-        <p></p>
-      </div>
     </div>
   </div>
   

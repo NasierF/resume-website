@@ -1,15 +1,19 @@
-html {height: 117%; overflow: auto;}
-body{height: 300%;} 
+html {height: 150%; overflow: auto;}
+body{height: 200%;} 
 #root {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; 
+  overflow: hidden; 
 }
 
 body {
   background-color: rgb(31, 18, 52);
   background-repeat: no-repeat;
-  
   background-position: center;
+}
+
+@media (max-width: 718px) {
+  html {height: 150%; overflow: auto;}
+  body{height: 300%;} 
 }
