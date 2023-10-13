@@ -15,5 +15,5 @@ body {
 
 @media (max-width: 718px) {
   html {height: 150%; overflow: auto;}
-  body{height: 300%;} 
+  body{height: 320%;}
 }
