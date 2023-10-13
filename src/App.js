@@ -16,7 +16,7 @@ import python from './python-5.svg'
 import HTML from './html-1.svg'
 import Css from './css-3.svg'
 import dwn from './download-solid.svg'
-import LaTeXRes from './LaTeX_resume.pdf'
+import LaTeXRes from './nasier-fowlkes-resume.pdf'
 
 function App(){
   const {ref, inView} = useInView();
