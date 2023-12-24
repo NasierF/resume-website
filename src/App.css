@@ -12,12 +12,14 @@
 
 .App {
   text-align: center;
-  color: aqua;
+  color: white;
+  font-family: 'Poiret One', sans-serif;
 }
 
 .App span{
   color: lightgreen;
 }
+
 .TitleConainer {
   height: 100vh;
   width: 100vw;
@@ -52,6 +54,8 @@
   size: 10px;
   color: white;
   margin-left: 5px;
+  justify-content: left;
+  align-content: center;
 }
 .TitleConainer p{
   font-size: 22px;
@@ -62,6 +66,11 @@
    text-decoration: none;
    color: inherit;
 }
+#abtme{
+  font-size: 50px;
+
+}
+
 .resume-download{
   display: flex;
   /*flex-direction: row;/**/
@@ -71,9 +80,13 @@
   width: 14vw;
   text-align: center;
   margin-top: -4vh ;
-  margin-left: -1vw;
+  margin-left: 0%;
   height: 6vh;
   align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+
 }
 .resume-download img{
   height: auto;
@@ -99,12 +112,17 @@
   flex-direction: column;
   text-align: left;
   color: white;
-  height: 5px;
+  height: 50vh;
   font-size: 50px;
   line-height: -2px;
-  margin-top: 235px; 
-  margin-left: 0; 
+  margin-top: 80vh; 
+  margin-left: 0vw; 
   font-family: 'Poiret One', sans-serif;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  row-gap: 20vh;
 }
 
 .AboutMe h1,
@@ -131,8 +149,9 @@
   background-color: lightgreen;
   width: 60vw;
   height: .2vh;
-  margin-left: 20vw;
+  margin-left: 20.5%;
   column-gap: 10vw;
+
 }
 .image-container{
   display: flex;
@@ -156,6 +175,7 @@
 }
 
 .bubbles{
+  opacity: 0;
   display: flex;
   align-items: center;
   background-color: rgb(43, 42, 42); /**/
@@ -165,8 +185,15 @@
   max-width: 23vw;
   height: 20vh;
   max-height: 50vh;
-  margin-left: -30vw;
-  margin-top: 9vh;
+  margin-left: -100%; 
+  margin-top: -10vh; 
+  transition: all .5s ease-out;
+}
+
+.bubbles:hover{
+  margin-bottom: 10px;
+  filter: drop-shadow(-20px 20px 10px rgba(80, 143, 80, 0.589)); 
+  transition: all .5s ease;
 }
 
 .bubbles p{
@@ -186,19 +213,28 @@
 }
 
 .skills{
-  margin-top: 12vh;
+  padding-right: 4vw;
+  margin-top: 6vh;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
 }
 
+.initial{
+  max-width: 200px;
+  height: auto;
+  aspect-ratio: 16/9;
+  opacity: 1;
+}
+  
 @media (max-width: 718px) {
   /* CSS rules specific to iPhones go here */
-  /* You can add or override styles for smaller screens */
   .App {
-    /* Example iPhone-specific styles */
     font-size: 16px;
   }
 
   .TitleConainer {
-    /* Example iPhone-specific styles */
     margin-left: 10vw;
     font-size: 60px;
     flex-wrap: wrap;
@@ -209,12 +245,14 @@
   .resume-download{
     transform: scale(.32);
     width: 120vw;
-    margin-left: -48vw;
-    margin-top: -1.5vh;
+    margin-left: -25%;
+    margin-top: 2%;
     height: 11vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-content: center;
+    justify-content: left;
   }
   .resume-download p{
     margin-left: 14vw;
@@ -237,6 +275,7 @@
     flex-wrap: wrap;
     line-height: 1;
     margin-top: 0;
+    width: 70vw;
   }
   .TitleConainer h3{
     height: 0vh;
@@ -251,6 +290,18 @@
     margin-top: 60vh;
     margin-left: 10px;
     max-height: 0vh;
+    align-items: center;
+    justify-items: center ;
+    align-content: center;
+    justify-content: left;
+  }
+
+  .AboutMe{
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    row-gap: 20vh;
   }
 
   .AboutMe h1{
@@ -260,11 +311,13 @@
   .bubbles{
     display: flex;
     flex-direction: row;
-    margin-left: -295vw;
+    margin-left: -100%;
     width: auto;
     max-width: 80vw;
     height: 100vh;
     flex-wrap: wrap;    
+    width: 100%;
+    opacity: 0;
   }
   .bubbles p{
     margin-left: 10px;

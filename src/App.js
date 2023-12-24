@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+// import { useState } from 'react';
 import './App.css';
 import github from './github.svg'
 import linkedin from './linkedin.svg'
@@ -17,21 +18,29 @@ import HTML from './html-1.svg'
 import Css from './css-3.svg'
 import dwn from './download-solid.svg'
 import LaTeXRes from './nasier-fowlkes-resume.pdf'
+// import Modal from './Modal'
+// import space from './space-background.jpeg'
 
 function App(){
+  //  logic for sliding in
   const {ref, inView} = useInView();
   const animation = useAnimation();
 
   useEffect(() => {
+    const viewportWidth = document.documentElement.clientWidth;
     console.log("use effect hook, inView = ", inView);
     if(inView){
-      animation.start({x: 1150, transition: {type: 'spring', duration: 2, bounce: 0.3, delay: 0.01}});
+      const target = viewportWidth/2;
+      animation.start({x: target, transition: {type: 'spring', duration: 1.5, bounce: 0.3, delay: 0.01}, opacity: 1});
     }
     if (!inView){
      ;
     }
 
   }, [inView, animation])
+
+  // logic for modal
+  // const [openModal, setOpenModal] = useState(false)
 
   return (
   <div className="App">
@@ -49,28 +58,32 @@ function App(){
       <a href='mailto:nasierfowlkes@yahoo.com' target='_blank' rel="noreferrer">
         <img src={mail} alt='email'/>
       </a>
-      <a href='tel:+6106627443' target='_blank' rel="noreferrer">
+      {/* phone number doesnt worl on published app also resum download istoo far to the left, lessen the width of the anchor*/}
+      <a href='tel:+16106627443' target='_blank' rel="noreferrer">
         <img src={phone} alt='phone#'/>
       </a>
       <div className='resume-download'>
         <a href={LaTeXRes} download="nasier-fowlkes-resume.pdf">
-          <p>download resume</p>
+          <p>Download resume</p>
           <img src={dwn} alt='resume download'/>
         </a>
       </div>
     </h5>
   </div>
+  <h1 id='abtme'> A little about myself </h1>
   <div ref={ref} className='AboutMe'>
-    <h1> A little about myself: </h1>
-      <motion.div className='bubbles' animate={animation} whileHover={{rotate: [0, -10]}}>
+    <div id='abt'></div>
+    {/* <h1> A little about myself: </h1> */}
+      <motion.div className='bubbles' animate={animation} >
           <p>I am the current <span>Web Manager</span> of Temple Robotics</p>
       </motion.div>
-    <motion.div className='bubbles' animate={animation} whileHover={{rotate: [0,10]}} >
+    <motion.div className='bubbles' animate={animation}>
         <p>I participated in Temple Universitys <span>2023 Owlhacks</span> competition </p>
     </motion.div>
-    <motion.div className='bubbles' animate={animation} whileHover={{rotate: [0,-10]}} >
+    <motion.div className='bubbles' animate={animation}>
         <p>My current occupation is <span>IT Support</span> at Temple University</p>
     </motion.div>
+    <div id='sk'></div>
     <div className='skills'>
       <h1>My <span>Skills</span></h1>
       <div className='line'><p></p></div>
@@ -86,8 +99,18 @@ function App(){
         <img src={Css} alt='Css'/>
       </div>
     </div>
+    <p></p>
   </div>
   
+  
+  
+  
+  {/* modal example here */}    
+      {/* <img className='initial' src={space} alt='space' onClick={() => {setOpenModal(true)}}/>
+      {openModal && <Modal closeModal = {setOpenModal}/>} */}
+
+  
+    
 </div>);
 }
 
