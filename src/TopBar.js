@@ -13,7 +13,7 @@ function scrollToTop() {
 }
 
 function scrollToAbt() {
-  const targetElement = document.getElementById('abt');
+  const targetElement = document.getElementById('test');
   const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
 
   console.log("onscroll pressed");

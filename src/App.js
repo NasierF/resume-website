@@ -45,7 +45,7 @@ function App(){
   return (
   <div className="App">
   <div className='TitleConainer'>
-    <h1>Hi!</h1>
+    <h1>Hi! </h1>
     <h2>I am <span>Nasier Fowlkes</span>,</h2>
     <h3><span>Computer Science</span> senior at <span>Temple University</span>.</h3>
     <h5>
@@ -70,6 +70,7 @@ function App(){
       </div>
     </h5>
   </div>
+  <div id='test'></div>
   <h1 id='abtme'> A little about myself </h1>
   <div ref={ref} className='AboutMe'>
     <div id='abt'></div>
