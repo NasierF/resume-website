@@ -3,20 +3,20 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 // import { useState } from 'react';
 import './App.css';
-import github from './github.svg'
-import linkedin from './linkedin.svg'
-import mail from './envelope-solid.svg'
-import phone from './phone-solid.svg'
-import R from './react-2.svg'
-import java from './java-4.svg'
-import js from './javascript-1.svg'
-import sqlite from './sqlite.svg'
-import C from './c-1.svg'
-import ROS from './Ros_logo.svg.png'
-import python from './python-5.svg'
-import HTML from './html-1.svg'
-import Css from './css-3.svg'
-import dwn from './download-solid.svg'
+import github from './icons/github.svg'
+import linkedin from './icons/linkedin.svg'
+import mail from './icons/envelope-solid.svg'
+import phone from './icons/phone-solid.svg'
+import R from './icons/react-2.svg'
+import java from './icons/java-4.svg'
+import js from './icons/javascript-1.svg'
+import sqlite from './icons/sqlite.svg'
+import C from './icons/c-1.svg'
+import ROS from './icons/Ros_logo.svg.png'
+import python from './icons/python-5.svg'
+import HTML from './icons/html-1.svg'
+import Css from './icons/css-3.svg'
+import dwn from './icons/download-solid.svg'
 import LaTeXRes from './nasier-fowlkes-resume.pdf'
 // import Modal from './Modal'
 // import space from './space-background.jpeg'
@@ -71,7 +71,7 @@ function App(){
     </h5>
   </div>
   <div id='test'></div>
-  <h1 id='abtme'> A little about myself </h1>
+  <h1 id='abtme'> Heres A little about myself </h1>
   <div ref={ref} className='AboutMe'>
     <div id='abt'></div>
     {/* <h1> A little about myself: </h1> */}
